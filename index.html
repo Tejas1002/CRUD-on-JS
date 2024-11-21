@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="cointenar">
+
+        <div class="main">
+
+            <div class="mian-heading">
+                <h1>Student Data</h1>
+            </div>
+            <table>
+                <tr>
+
+                    <div class="main-box">
+                        <td>
+                            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                                <div>
+                                    <label>Student Name*</label><label class="validation-error hide"
+                                        id="fullNameValidationError">This field is required.</label>
+                                    <input type="text" name="studentName" id="studentName" placeholder="Student Name">
+                                </div>
+                                <div>
+                                    <label>Enrollment</label>
+                                    <input type="text" name="enrollment" maxlength="12" id="enrollment" placeholder="Enrollment">
+                                </div>
+                                <div>
+                                    <label>Contact</label>
+                                    <input type="text" name="contact" maxlength="10" id="contact" placeholder="Contact"  required >
+                                </div>
+                                <div>
+                                    <label>Email</label>
+                                    <input type="email" name="emailField" id="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-action-buttons">
+                                    <input type="submit" value="Submit">
+                                    <input type="reset" value="reset">
+                                </div>
+                            </form>
+                        </td>
+
+
+                        <td class="box-two">
+                            <table class="list" id="employeeList">
+
+                                <thead class="small-box">
+                                    <tr>
+                                        <th>Student Name</th>
+                                        <th>Enrollment</th>
+                                        <th>Contact</th>
+                                        <th>Email</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </td>
+
+                    </div>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
